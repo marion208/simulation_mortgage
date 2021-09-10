@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Simulation prêt immobilier",
+  "name": "Outil de calcul des mensualités d'un prêt immobilier",
   "icons": [
     {
       "src": "favicon.ico",
