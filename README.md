@@ -5,5 +5,5 @@ Outil disponible en ligne : https://simulation-credit-immobilier.marion208.com/
 
 # React Project
 
-Mortgage loan simulation tool: calculation of monthly payments, with interest rate and insurance rate, according to the duration and amount of the loan
+Mortgage loan simulation tool: calculation of monthly payments, with interest rate and insurance rate, according to the duration and amount of the loan.
 Available online : https://simulation-credit-immobilier.marion208.com/
