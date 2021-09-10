@@ -1,38 +1,193 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("fonts/Roboto-Light.ttf");
+}
 .App {
   text-align: center;
+  font-family: "Roboto-Medium";
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.invisible {
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 95vh;
+}
+.card {
+  border: 1px rgb(175 171 171) solid;
+  padding: 1em;
+  box-shadow: 1px 1px 10px 5px rgb(218 210 210);
+}
+.card_container {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .card_container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 800px) {
+  .card_container {
+    flex-direction: row;
+  }
+}
+.card_range {
+  margin: 1.5em;
+}
+.scroll_line {
+  background-color: rgb(88, 127, 211);
+  height: 10px;
+  width: 200px;
+  border-radius: 5px;
+}
+.line_selector {
+  background-color: rgb(88, 127, 211);
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  position: relative;
+  top: -7.5px;
+}
+.line_selector:hover {
+  cursor: pointer;
+}
+.low_weight {
+  font-family: "Roboto-Light";
+}
+.low_font_size {
+  font-size: 0.9em;
+}
+.normal_weight {
+  font-family: "Roboto-Medium";
+}
+.high_weight {
+  font-family: "Roboto-Bold";
+  font-size: 2em;
+}
+.title_input_range {
+  margin: 0.5em 0em;
+}
+.input_rate, .text_input_range {
+  border-bottom: 2px solid rgb(88, 127, 211);
+}
+.value_input_range {
+  border-bottom: 2px solid rgb(88, 127, 211);
+}
+.tip_help:hover {
+  cursor: pointer;
+}
+.input_rate > input[type=text] {
+  border: none;
+  max-width: 50px;
+  text-align: center;
+}
+.input_rate > input[type=text]:focus {
+  outline: none;
+  text-align: center;
+}
+input[type=tel] {
+  border: none;
+  text-align: center;
+  font-family: "Roboto-Medium";
+  font-size: 1em;
+  padding: 0px;
+  width: 6em;
+  margin-bottom: 0.5em;
+}
+input[type=tel]:focus {
+  outline: none;
+  text-align: center;
+}
+input[type=number] {
+  -webkit-appearance: none;
+  border: none;
+  width: 50px;
+  background-color: transparent;
+  font-family: "Roboto-Light";
+  font-size: 1em;
+  text-align: center;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 200px;
+  background-color: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: rgb(88, 127, 211);
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 10px;
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(88, 127, 211);
 }
 
-.App-link {
-  color: #61dafb;
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background-color: rgb(88, 127, 211);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background-color: rgb(88, 127, 211);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background-color: rgb(88, 127, 211);
+}
+input[type=range]::-ms-fill-upper {
+  background-color: rgb(88, 127, 211);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background-color: rgb(88, 127, 211);
 }
