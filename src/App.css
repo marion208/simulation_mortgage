@@ -21,7 +21,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+}
+@media screen and (min-height: 800px) {
+  #root {
+    height: 95vh;
+  }
 }
 .card {
   border: 1px rgb(175 171 171) solid;
@@ -40,6 +44,9 @@
 @media screen and (min-width: 800px) {
   .card_container {
     flex-direction: row;
+  }
+  .card {
+    min-width: 350px;
   }
 }
 .card_range {

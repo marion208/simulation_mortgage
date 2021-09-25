@@ -15,7 +15,7 @@ class App extends Component {
   componentDidMount() {
     var rateInterest = document.getElementById("rate_interest");
     var rateInsurance = document.getElementById("rate_insurance");
-    rateInterest.value = 0.79;
+    rateInterest.value = 0.44;
     rateInsurance.value = 0.34;
     this.handleInputChange();
   }
@@ -44,7 +44,7 @@ class App extends Component {
     var rateInterest = document.getElementById("rate_interest");
     var rateInsurance = document.getElementById("rate_insurance");
     var durationValue = inputDuration.value;
-    var newRateInterest = 0.43;
+    var newRateInterest = 0.44;
     switch (durationValue) {
       case '2':
       case '3':
@@ -54,7 +54,7 @@ class App extends Component {
       case '7':
       case '8':
       case '9':
-        newRateInterest = 4.44;
+        newRateInterest = 0.44;
         break;
       case '10':
       case '11':
@@ -122,6 +122,11 @@ class App extends Component {
             <p><span className="high_weight" id="result_mortgage"></span> €/mois</p>
             <p className="low_weight low_font_size">Coût du crédit : <span className="normal_weight" id="result_cost"></span>€ dont <span className="normal_weight" id="result_insurance"></span>€ d'assurance</p>
           </div>
+        </div>
+        <div>
+          <p className="low_weight low_font_size" id="legal_notices">Mentions légales :<br />
+            Ce site ne collecte ni cookie ni donnée personnelle.<br />
+            Site hébergé par <a href="https://www.ionos.com/">IONOS</a></p>
         </div>
       </div>
     );
